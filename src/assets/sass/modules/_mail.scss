@@ -1,0 +1,14 @@
+$mail-gutter: 20px !default;
+$mail-wrapper-color: #ffffff !default;
+
+.mail-horizontal-padding {
+    width: $mail-gutter;
+}
+
+.mail-vertical-padding {
+    height: $mail-gutter;
+}
+
+.mail-wrapper {
+    background-color: $mail-wrapper-color;
+}
