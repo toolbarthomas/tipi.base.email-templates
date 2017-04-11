@@ -1,0 +1,19 @@
+{
+  "name": "tipi",
+  "homepage": "https://github.com/toolbarthomas/tipi",
+  "authors": [
+    "Thomas van der Velde <contact@toolbarthomas.net>"
+  ],
+  "description": "Workflow for creating emailtemplates",
+  "keywords": [
+    "toolbarthomas",
+    "tomahawk",
+    "emailtemplates"
+  ],
+  "ignore": [
+    "node_modules/",
+    "bower_components/",
+    ".sass-cache/",
+    "dist/"
+  ],
+}

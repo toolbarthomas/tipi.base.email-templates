@@ -1,5 +1,3 @@
-var buffer = require('vinyl-buffer');
-var merge = require('merge-stream');
 var runSequence = require('run-sequence');
 var del = require('del');
 
@@ -55,14 +53,6 @@ function connect()
     });
 }
 
-gulp.task('default', function(callback) {
-    runSequence(
-        'styles',
-        'emailtemplates',
-        callback
-    );
-});
-
 gulp.task('clean', function() {
    return clean();
 });
@@ -75,6 +65,10 @@ gulp.task('emailtemplates', function() {
     return emailbuilder();
 });
 
+gulp.task('connect', function() {
+    return connect();
+});
+
 gulp.task('watch', function() {
     plugins.watch([
             SRC + '/assets/**/*.scss',
@@ -83,4 +77,18 @@ gulp.task('watch', function() {
             gulp.start('default');
         }
     );
+});
+
+gulp.task('default', function(callback) {
+    runSequence(
+        'styles',
+        'emailtemplates',
+        callback
+    );
+});
+
+gulp.task('serve', function(callback) {
+    gulp.start('default');
+    gulp.start('connect');
+    gulp.start('watch');
 });
