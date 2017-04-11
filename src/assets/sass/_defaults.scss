@@ -1,0 +1,105 @@
+/* Force Outlook to provide a "view in browser" menu link. */
+#outlook a {
+    padding: 0;
+}
+
+body{
+    width:100% !important;
+    -webkit-text-size-adjust:100%;
+    -ms-text-size-adjust:100%;
+    margin:0;
+    padding:0;
+    font-family: 'Helvetica Neue', 'Segoe UI', 'Arial', 'Helvetica', 'sans-serif';
+}
+
+#mail {
+    margin:0;
+    padding:0;
+    width: 100%;
+    line-height: 100% !important;
+}
+
+body,
+#mail {
+    background-color: $body-color;
+}
+
+.mail-padding {
+    width: 20px;
+}
+
+img {
+    outline: none;
+    text-decoration: none;
+    -ms-interpolation-mode: bicubic;
+    display: block;
+
+    a & {
+        border: none;
+    }
+}
+
+p {
+    margin: 1em 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 100% !important;
+    color: $base-color !important;
+    -webkit-font-smoothing: antialiased;
+
+    a {
+        color: $base-color !important;
+
+        &:active {
+            color: $link-color--active !important;
+        }
+
+        &:visited {
+            color: $link-color--visited;
+        }
+    }
+}
+
+table {
+    border-collapse: collapse;
+    mso-table-lspace: 0pt;
+    mso-table-rspace: 0pt;
+
+    td {
+        border-collapse: collapse;
+    }
+}
+
+a {
+    color: $link-color;
+}
+
+.yshortcuts {
+    &,
+    a,
+    a:link,
+    a:visited,
+    a:hover,
+    a span {
+        color: $base-color;
+        text-decoration: none !important;
+        border: none !important;
+        outline: none !important;
+        background: none transparent !important;
+    }
+}
+
+code {
+    white-space: normal;
+    word-break: break-all;
+}
+
+br {
+    line-height: 100%;
+}
