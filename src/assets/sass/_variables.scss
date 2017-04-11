@@ -1,6 +1,7 @@
-$base-color: black;
-$link-color: blue;
-$link-color--active: red;
-$link-color--visited: purple;
+$base-color: black !default;
+$link-color: blue !default;
+$link-color--active: red !default;
+$link-color--visited: purple !default;
 
-$body-color: #ededed;
+$body-color: #ededed !default;
+$primary-color: #629DC6 !default;

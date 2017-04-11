@@ -1,0 +1,15 @@
+{% if links is not empty %}
+    <table class="link-group" border="0" cellpadding="{{ cellpadding is not empty ? cellpadding : '5' }}" cellspacing="0">
+        <tbody>
+            <tr>
+                {% for link in links %}
+                    {% if link.href and link.title %}
+                    <td class="link-group-item" valign="top">
+                        <a href="{{ link.href }}" target="_blank">{{ link.title }}</a>
+                    </td>
+                    {% endif %}
+                {% endfor %}
+            </tr>
+        </tbody>
+    </table>
+{% endif %}

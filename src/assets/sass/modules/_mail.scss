@@ -1,14 +1,53 @@
 $mail-gutter: 20px !default;
-$mail-wrapper-color: #ffffff !default;
 
-.mail-horizontal-padding {
-    width: $mail-gutter;
+$mail-body-color: #ffffff !default;
+$mail-header-color: $primary-color !default;
+$mail-footer-color: #0d0d0d !default;
+
+.mail {
+    font-size: 14px;
+    line-height: 125%;
 }
 
-.mail-vertical-padding {
+.mail-horizontal-gutter {
+    width: $mail-gutter;
+    font-size: small;
+}
+
+.mail-vertical-gutter {
     height: $mail-gutter;
+    font-size: small;
 }
 
 .mail-wrapper {
-    background-color: $mail-wrapper-color;
+    width: 680px;
+
+    @media screen and (max-device-width: 320px)
+    {
+        width: 320px !important;
+    }
+}
+
+.mail-header,
+.mail-body,
+.mail-footer {
+    width: 640px;
+
+    @media screen and (max-device-width: 320px)
+    {
+        width: 280px !important;
+    }
+}
+
+.mail-header {
+    background-color: $mail-header-color;
+}
+
+.mail-body {
+    background-color: $mail-body-color;
+}
+
+.mail-footer {
+    background-color: $mail-footer-color;
+    color: $body-color;
 }

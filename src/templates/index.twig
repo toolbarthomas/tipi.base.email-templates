@@ -4,6 +4,10 @@
 
 {% extends "layouts/base.twig" %}
 
+{% block header %}
+    {% include "templates/partials/header.twig" %}
+{% endblock %}
+
 {% block content %}
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -11,4 +15,14 @@
     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    {% include "templates/modules/button.twig" with {
+        title : 'Sample button',
+        href : 'http://example.com'
+    } %}
+
+{% endblock %}
+
+{% block footer %}
+    {% include "templates/partials/footer.twig" %}
 {% endblock %}
