@@ -38,6 +38,7 @@ function emailbuilder()
         SRC + '/**/*.twig',
         '!' + SRC + '/**/layouts/**/*.twig',
         '!' + SRC + '/**/partials/*.twig',
+        '!' + SRC + '/**/modules/*.twig',
     ])
     .pipe(plugins.plumber())
     .pipe(plugins.twig(twig_options))

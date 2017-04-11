@@ -1,11 +1,21 @@
 .link-group {
     font-size: 11px;
     line-height: 125%;
+
+    @media screen and (max-device-width: $smartphone-max-width) {
+        width: 100%;
+    }
 }
 
 .link-group-item {
-
+    text-align: center;
     a {
         color: $primary-color;
+    }
+
+    @media screen and (max-device-width: $smartphone-max-width) {
+        display: block !important;
+        padding: 15px 0 !important;
+        width: 100% !important;
     }
 }
