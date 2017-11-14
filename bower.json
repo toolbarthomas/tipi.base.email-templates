@@ -1,6 +1,6 @@
 {
-  "name": "tipi",
-  "homepage": "https://github.com/toolbarthomas/tipi",
+  "name": "tomahawk",
+  "homepage": "https://github.com/toolbarthomas/tomahawk",
   "authors": [
     "Thomas van der Velde <contact@toolbarthomas.net>"
   ],
@@ -15,5 +15,5 @@
     "bower_components/",
     ".sass-cache/",
     "dist/"
-  ],
+  ]
 }
