@@ -1,15 +1,15 @@
-$button-horizontal-gutter: 25px;
-$button-vertical-gutter: 15px;
+$button-horizontal-gutter: 18px;
+$button-vertical-gutter: 0;
 
 .button {
-    max-width: 400px;
-    background-color: $primary-color;
+    max-width: 320px;
+    height: 44px;
+    background-color: transparent;
     color: $body-color;
 
-    border-radius: 3px;
-
     td {
-        padding: $button-vertical-gutter $button-horizontal-gutter;
+        padding: 0;
+        margin: 0;
     }
 
     a {
@@ -18,5 +18,22 @@ $button-vertical-gutter: 15px;
         font-size: 100%;
         text-decoration: none;
         font-weight: bold;
+    }
+}
+
+.button-inner {
+    width: 100%;
+    height: 100%;
+    background-color: $primary-color;
+
+    td {
+        padding: $button-vertical-gutter $button-horizontal-gutter;
+    }
+
+    img {
+        display: block;
+        margin: 0;
+        border: none;
+        outline: none;
     }
 }

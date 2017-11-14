@@ -12,6 +12,16 @@ function clean()
     return del([DEST]);
 }
 
+function copy() {
+    return gulp.src([
+        SRC + '/assets/**/*',
+        '!' + SRC + '/assets/css/**/*',
+        '!' + SRC + '/assets/sass/**/*'
+    ], {
+        nodir: true
+    }).pipe(gulp.dest(DEST + '/assets'));
+}
+
 function sass()
 {
     return gulp.src([
@@ -58,6 +68,10 @@ gulp.task('clean', function() {
    return clean();
 });
 
+gulp.task('copy', function () {
+    return copy();
+});
+
 gulp.task('styles', function() {
     return sass();
 });
@@ -82,7 +96,10 @@ gulp.task('watch', function() {
 
 gulp.task('default', function(callback) {
     runSequence(
-        'styles',
+        [
+            'copy',
+            'styles'
+        ],
         'emailtemplates',
         callback
     );
